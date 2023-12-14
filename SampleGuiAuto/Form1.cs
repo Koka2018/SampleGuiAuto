@@ -131,6 +131,7 @@ namespace SampleGuiAuto
                 MessageBox.Show("画面が見つかりませんでした。");
             }
             var aeForm = AutomationElement.FromHandle(windowHandle);
+            aeForm.ShowInfo();
         }
     }
 }

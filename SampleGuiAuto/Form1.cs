@@ -120,5 +120,17 @@ namespace SampleGuiAuto
                 proc.Kill();
             }
         }
+
+        private void mBtnFindForm_Click(object sender, EventArgs e)
+        {
+            var windowName = mTxtFormName.Text;
+            var windowHandle = AEWindow.FindWindow(windowName);
+
+            if(windowHandle == IntPtr.Zero)
+            {
+                MessageBox.Show("画面が見つかりませんでした。");
+            }
+            var aeForm = AutomationElement.FromHandle(windowHandle);
+        }
     }
 }

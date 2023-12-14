@@ -56,6 +56,7 @@
     <Compile Include="AEControls\AETabPage.cs" />
     <Compile Include="AEControls\AETextBox.cs" />
     <Compile Include="AEExtension.cs" />
+    <Compile Include="AEWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

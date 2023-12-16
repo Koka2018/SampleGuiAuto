@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Text;
+using System.Drawing;
 using System.Windows.Automation;
 
 namespace GuiAutoGear.AEControls
@@ -56,7 +58,21 @@ namespace GuiAutoGear.AEControls
 
         public override string ToString()
         {
-            return $"ID={AutomationId},Name={Name},Type={Type},Rect={Rect}";
+            try
+            {
+                var sb = new StringBuilder();
+                sb.AppendLine("=====");
+                sb.AppendLine($"AutomationId = {AutomationId}");
+
+                //sb.AppendLine(Name);
+                sb.AppendLine($"Type = {Type}");
+                sb.AppendLine($"Rect = {Rect}");
+                return sb.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }

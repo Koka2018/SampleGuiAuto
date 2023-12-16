@@ -45,7 +45,8 @@ namespace SampleGuiAuto
                 Thread.Sleep(1000);
                 var aeForm = AutomationElement.FromHandle(proc.MainWindowHandle);
 
-                aeForm.ShowInfo();
+                var a = AEWindow.GetLocation(aeForm);
+                MessageBox.Show($"{a.X}, {a.Y}");
 
                 // 操作対象のコントロールへの参照を
                 // AutomationElementオブジェクトとして取得
@@ -71,10 +72,13 @@ namespace SampleGuiAuto
 
                 foreach(AutomationElement elem in aeForm.FindAllElements(true))
                 {
-                    Console.WriteLine(new AEControlBase(elem).ToString());
+                    var aeCtrl = new AEControlBase(elem);
+                    Console.WriteLine(aeCtrl.ToString());
                 }
+#if TBD
                 var numUD = new AETextBox(aeForm, "numUpDown");
                 numUD.Text = "3";
+#endif
 
                 // 1つ目の値を入力、［追加］ボタン押下
                 txtInput.Text = "ねこ";

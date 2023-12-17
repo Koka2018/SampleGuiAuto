@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiAutoGear", "GuiAutoGear\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiAutoGearTests", "GuiAutoGearTests\GuiAutoGearTests.csproj", "{5F26E907-C507-4B53-A64E-D2B4C84AE2FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrivForm", "TestDrivForm\TestDrivForm.csproj", "{5655F24C-D22E-4F2A-BCEA-8990675FB28B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{5F26E907-C507-4B53-A64E-D2B4C84AE2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F26E907-C507-4B53-A64E-D2B4C84AE2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F26E907-C507-4B53-A64E-D2B4C84AE2FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5655F24C-D22E-4F2A-BCEA-8990675FB28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5655F24C-D22E-4F2A-BCEA-8990675FB28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5655F24C-D22E-4F2A-BCEA-8990675FB28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5655F24C-D22E-4F2A-BCEA-8990675FB28B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

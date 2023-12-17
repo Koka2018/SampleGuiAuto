@@ -45,8 +45,8 @@ namespace SampleGuiAuto
                 Thread.Sleep(1000);
                 var aeForm = AutomationElement.FromHandle(proc.MainWindowHandle);
 
-                var a = AEWindow.GetLocation(aeForm);
-                MessageBox.Show($"{a.X}, {a.Y}");
+                //var a = AEWindow.GetLocation(aeForm);
+                //MessageBox.Show($"{a.X}, {a.Y}");
 
                 // 操作対象のコントロールへの参照を
                 // AutomationElementオブジェクトとして取得
@@ -128,7 +128,7 @@ namespace SampleGuiAuto
         private void mBtnFindForm_Click(object sender, EventArgs e)
         {
             var windowName = mTxtFormName.Text;
-            var windowHandle = AEWindow.FindWindow(windowName);
+            var windowHandle = AEWindow.FindWindowHandle(windowName);
 
             if(windowHandle == IntPtr.Zero)
             {
@@ -136,6 +136,17 @@ namespace SampleGuiAuto
             }
             var aeForm = AutomationElement.FromHandle(windowHandle);
             aeForm.ShowInfo();
+        }
+
+        private void mBtnCtrlList_Click(object sender, EventArgs e)
+        {
+            var form = new AEWindow("Form1");
+            var ctrlList = form.GetCtrlIdList();
+
+            foreach(var ctrl in ctrlList)
+            {
+                mLstCtrlList.Items.Add(ctrl);
+            }
         }
     }
 }

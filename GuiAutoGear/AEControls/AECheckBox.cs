@@ -23,5 +23,10 @@ namespace GuiAutoGear.AEControls
             : base(rootElement, automationId)
         {
         }
+
+        public AECheckBox(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
     }
 }

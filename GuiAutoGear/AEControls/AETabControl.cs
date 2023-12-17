@@ -19,6 +19,11 @@ namespace GuiAutoGear.AEControls
         {
         }
 
+        public AETabControl(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
+
         protected List<AETabPage> GetTabPages()
         {
             var tabPageList = new List<AETabPage>();

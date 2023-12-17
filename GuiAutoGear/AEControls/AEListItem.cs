@@ -17,5 +17,10 @@ namespace GuiAutoGear.AEControls
         {
             Index = index;
         }
+
+        public AEListItem(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
     }
 }

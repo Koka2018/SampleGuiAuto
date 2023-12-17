@@ -50,6 +50,7 @@
     <Compile Include="AEControls\AEComboBox.cs" />
     <Compile Include="AEControls\AEControlBase.cs" />
     <Compile Include="AEControls\AEButton.cs" />
+    <Compile Include="AEControls\AECheckedListBox.cs" />
     <Compile Include="AEControls\AEListBox.cs" />
     <Compile Include="AEControls\AEListItem.cs" />
     <Compile Include="AEControls\AERadioButton.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="AEControls\AETextBox.cs" />
     <Compile Include="AEExtension.cs" />
     <Compile Include="AEWindow.cs" />
+    <Compile Include="ProcessTools\ProcessParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

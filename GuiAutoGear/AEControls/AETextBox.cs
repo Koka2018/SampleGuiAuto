@@ -20,6 +20,11 @@ namespace GuiAutoGear.AEControls
         {
         }
 
+        public AETextBox(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
+
         public override string ToString()
         {
             return $"{base.ToString()},Text={Text}";

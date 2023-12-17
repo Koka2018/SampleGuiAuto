@@ -86,6 +86,12 @@ namespace GuiAutoGear
             return element.FindAll(TreeScope.Children, condition);
         }
 
+        public static AutomationElementCollection GetComboItems(this AutomationElement element)
+        {
+            var condition = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.ListItem);
+            return element.FindAll(TreeScope.Subtree, condition);
+        }
+
         public static int GetListSelectedIndex(this AutomationElement element)
         {
             var listItems = element.GetListItems();

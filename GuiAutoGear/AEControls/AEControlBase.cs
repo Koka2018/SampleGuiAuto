@@ -7,13 +7,21 @@ namespace GuiAutoGear.AEControls
 {
     public class AEControlBase
     {
+        #region メンバ変数
+
         protected AutomationElement mElement = null;
+
+        #endregion
+
+        #region プロパティ
 
         public string AutomationId { get { return mElement.Current.AutomationId; } }
 
         public string Name { get { return mElement.Current.Name; } }
 
         public ControlType Type { get { return mElement.Current.ControlType; } }
+
+        public AutomationElement Element => mElement;
 
         public Rectangle Rect
         {
@@ -41,6 +49,8 @@ namespace GuiAutoGear.AEControls
 
         protected SelectionItemPattern SelectionItemPattern { get { return mElement.GetSelectionItemPattern(); } }
 
+        #endregion
+
         public AEControlBase(AutomationElement automationElement)
         {
             mElement = automationElement;
@@ -51,9 +61,16 @@ namespace GuiAutoGear.AEControls
             mElement = rootElement.FindElement(automationId);
         }
 
+        public AEControlBase(AEControlBase rootCtrl, string automationId)
+        {
+            mElement = rootCtrl.mElement.FindElement(automationId);
+        }
+
+        #region メソッド
+
         public void Focus()
         {
-            mElement.SetFocus();
+            SelectionItemPattern.Select();
         }
 
         public override string ToString()
@@ -74,5 +91,7 @@ namespace GuiAutoGear.AEControls
                 return ex.Message;
             }
         }
+
+        #endregion
     }
 }

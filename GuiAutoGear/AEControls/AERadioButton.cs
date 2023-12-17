@@ -16,6 +16,11 @@ namespace GuiAutoGear.AEControls
         {
         }
 
+        public AERadioButton(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
+
         public void Select()
         {
             SelectionItemPattern.Select();

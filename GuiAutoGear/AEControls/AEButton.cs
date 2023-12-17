@@ -16,6 +16,11 @@ namespace GuiAutoGear.AEControls
         {
         }
 
+        public AEButton(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
+
         public void Click()
         {
             InvokePattern.Invoke();

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Automation;
 
 namespace GuiAutoGear.AEControls
@@ -7,7 +8,11 @@ namespace GuiAutoGear.AEControls
     {
         public List<AEListItem> Items { get => GetItems(); }
 
-        public int SelectedIndex { get=> mElement.GetListSelectedIndex(); }
+        public int SelectedIndex
+        {
+            get => mElement.GetListSelectedIndex();
+            set { Items[value].Focus(); }
+        }
 
         public AEListItem SelectedItem
         {
@@ -39,9 +44,14 @@ namespace GuiAutoGear.AEControls
         {
         }
 
+        public AEListBox(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
+
         protected List<AEListItem> GetItems()
         {
-            var aeElements = mElement.FindAllElements();
+            var aeElements = mElement.GetListItems();
             var itemList = new List<AEListItem>();
             for(int idx = 0; idx < aeElements.Count; idx++)
             {

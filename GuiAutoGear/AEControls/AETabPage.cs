@@ -15,5 +15,10 @@ namespace GuiAutoGear.AEControls
             : base(rootElement, automationId)
         {
         }
+
+        public AETabPage(AEControlBase rootCtrl, string automationId)
+            : base(rootCtrl, automationId)
+        {
+        }
     }
 }
